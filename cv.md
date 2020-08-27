@@ -16,3 +16,31 @@
 * Skills: OOP, HTML, CSS, JavaScript, Git, VSCode
 
 ***
+
+* Code examples : 
+```
+const createStore = (initialState, reducer) => {
+    let state = initialState;
+    let subscribers = [];
+    return {
+        dispatch: (action) => {
+            state = reducer(state, action);
+            subscribers.forEach((fn)=>fn());
+        },
+        getState: () => state,
+        subscribe: (fn) => subscribers.push(fn)
+    }
+}
+```
+***
+
+* Experience : no experience in IT
+
+***
+
+* Education : HTMLacademy, Belarusian State Agrarian
+Technical University, «GAS-INSTITUTE»
+
+***
+
+* English :  self-education A2
